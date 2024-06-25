@@ -1,0 +1,69 @@
+
+ <!--navbar-->
+<nav class="navbar navbar-expand-lg bg-primary-subtle navbar-black">
+        <div class="container">
+            <a href="/" class="navbar-brand">TechMark</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    {% block css_files %}
+                    {% endblock  %}
+                    <!-- Menü öğeleri buraya gelecek -->
+                    <li class="nav-item">
+                        <a href="pages/phone" class="nav-link">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            Telefon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/computer" class="nav-link">
+                            <i class="fa-solid fa-laptop"></i>
+                            Bilgisayar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/tablet" class="nav-link">
+                            <i class="fa-solid fa-tablet"></i>
+                            Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            <i class="fa-regular fa-address-card"></i>
+                            Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">
+                            <i class="fa-solid fa-phone"></i>
+                            İletişim</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Aksesuarlar
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/product/1">Kulaklıklar</a></li>
+                          <li><a class="dropdown-item" href="/product/2">Şarj Aletleri</a></li>
+                          <li><a class="dropdown-item" href="/product/3">Mouse Çeşitleri</a></li>
+                          <li><a class="dropdown-item" href="/product/4">Klavye Çeşitleri</a></li>
+                          <li><a class="dropdown-item" href="/product/5">Kılıflar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Sepetim</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Favorilerim</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block js_files %}{% endblock  %}

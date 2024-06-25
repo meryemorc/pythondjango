@@ -1,0 +1,23 @@
+{% load static %}
+<div class="col-md-4 mb-4">
+    <div class="card h-100" style="width: 18rem;">
+        <img class="card-img-top custom-img object-fit" src="{% static 'product/img/' %}{{ product.imageUrl }}" alt="{{ product.title }}">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <h5 class="card-title me-2">
+                   <a href="{% static '' %}{{ product.title|slugify }}.html">{{ product.title }}</a>
+                </h5>
+                <a href="{% static 'pages/category/' %}" class="btn btn-primary btn-sm">İncele</a>
+            
+                <span>
+                    {% if product.isActive %}
+                        <span class="badge bg-success mx-2">Satışta</span>
+                    {% else %}
+                        <span class="badge bg-warning mx-2">Sınırlı Sayıda</span>
+                    {% endif %}
+                </span>
+                
+            </div>
+        </div>
+    </div>
+</div>

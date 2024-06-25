@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static "css/bootstrap.min.css" %} " />
+    
+    {% block css_files %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    {% endblock  %}
+
+    <title>TechMark | {% block page_title %}{% endblock %}</title>
+</head>
+<body>
+   
+     <!--navbar-->
+     {% include 'partials/_nav.html' %}
+
+    <!-- Offcanvas menü -->
+    {% include 'partials/_offcanvas.html' %}
+    <!--content-->
+    {% block content %}{% endblock  %}
+
+     
+    
+    {% block js_files %}
+      <script src=" {% static "js/bootstrap.bundle.min.js" %}   "></script>
+    {% endblock  %}
+</body>
+</html>

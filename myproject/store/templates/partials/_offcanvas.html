@@ -1,0 +1,26 @@
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Sepetim<i class="fa-solid fa-basket-shopping"></i></h5>
+        <button backgroun type="button" class="btn-close"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    {% block css_files %}
+    
+    {% endblock  %}
+    <div class="offcanvas-body">
+        <!-- Sepet içeriği buraya gelecek -->
+        <p>Şu an sepetinizde ürün yok. </p>
+    </div>
+</div>
+
+<!-- Favorilerim Offcanvas menü -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Favorilerim</h5>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!--favorileridiğimiz ürünler buraya gelecek -->
+        <p>Şu an favorilediğiniz ürün yok.</p>
+    </div>
+</div>
